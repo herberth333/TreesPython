@@ -31,8 +31,7 @@ class Node:
         self._adicionar_nos(dot, self)
         dot.render(filename, format='png', cleanup=True)
         print(f"Árvore renderizada em: {filename}.png")
-    
-     def _adicionar_nos(self, dot, node):
+    def _adicionar_nos(self, dot, node):
         if node is not None:
             dot.node(str(id(node)), str(node.data))
             if node.left:
